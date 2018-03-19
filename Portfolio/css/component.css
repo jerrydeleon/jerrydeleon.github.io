@@ -10,7 +10,7 @@
 }
 
 .demo-1 .large-header {
-	background-image: url('https://github.com/jerrydeleon/jerrydeleon.github.io/blob/master/Portfolio/Hyades.jpg');
+	background-image: url('../Portfolio/Hyades.jpg');
 	background-position: center bottom;
 }
 
