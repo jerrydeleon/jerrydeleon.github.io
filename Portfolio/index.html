@@ -22,6 +22,48 @@
 
 <body>
 
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    window.scroll({
+  top: 825, 
+  left: 0, 
+  behavior: 'smooth' 
+});
+    
+  
+}
+    
+    function topFunction2() {
+    window.scroll({
+  top: 1650, 
+  left: 0, 
+  behavior: 'smooth' 
+});
+    }
+        function topFunction3() {
+    window.scroll({
+  top: 2000, 
+  left: 0, 
+  behavior: 'smooth' 
+});
+    
+  
+}
+</script>
     <div class="container demo-1">
         <div class="content">
             <div id="large-header" class="large-header">
@@ -32,6 +74,7 @@
             <div class="codrops-header">
                 <h1>RÉSUMÉ</br>
                     <h2> </h2>
+                
 
                     <span><strong>Education</strong></span>
                     <span>The University of Texas Rio Grande Valley Edinburg, TX
@@ -40,13 +83,16 @@
 
                     <nav class="codrops-demos">
                         <a class="current-demo" >Skills</a>
-                        <a href="#second">Experience</a>
-                        <a href="#third">Relevant Coursework</a>
+                        <a id = "2" onclick="topFunction2()">Experience</a>
+                        <a onclick="topFunction3()">Relevant Coursework</a>
                         <a href="https://github.com/jerrydeleon">Git Hub</a>
                         <a href="https://www.linkedin.com/in/gerardodeleon1995">LinkedIn</a>
                         <a href="https://drive.google.com/open?id=1PAd8f0YbNetPo2s_m5ajfEgv5euJpWh9">Resume.pdf</a>
 
                     </nav>
+
+
+                
 
                     <h1>
                         </br>
@@ -240,6 +286,13 @@
 
 
 
+                <header></br>
+                <header></br>
+                 <header></br>
+                <header></br>
+                
+                
+               <center><p>Gerardo de Leon | 2018</p></center> 
             </div>
 
         </div>
