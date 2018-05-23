@@ -1,312 +1,200 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
+   <head>
+      <script src="jquery-3.3.1.min.js"></script>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Gerardo de Leon</title>
+      <meta name="description" content="Gerardo De Leon" />
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+      <meta name="keywords" content="header, canvas, animated, creative, inspiration, javascript" />
+      <meta name="author" content="Codrops" />
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+      <link rel="stylesheet" type="text/css" href="css/demo.css" />
+      <link rel="stylesheet" type="text/css" href="css/component.css" />
+      <link href='http://fonts.googleapis.com/css?family=Raleway:200,400,800' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" type="text/css" href="css/demo1.css" />
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300" type="text/css" />
+      <!--[if IE]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <![endif]-->
+   </head>
+   <body>
+      <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+      <script>
+         // When the user scrolls down 20px from the top of the document, show the button
+         window.onscroll = function() {scrollFunction()};
 
-<head>
+         function scrollFunction() {
+             if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                 document.getElementById("myBtn").style.display = "block";
+             } else {
+                 document.getElementById("myBtn").style.display = "none";
+             }
+         }
 
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Gerardo de Leon</title>
-    <meta name="description" content="Gerardo De Leon" />
-    <meta name="keywords" content="header, canvas, animated, creative, inspiration, javascript" />
-    <meta name="author" content="Codrops" />
-    <link rel="shortcut icon" href="../favicon.ico">
-    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
-    <link rel="stylesheet" type="text/css" href="css/demo.css" />
-    <link rel="stylesheet" type="text/css" href="css/component.css" />
-    <link href='http://fonts.googleapis.com/css?family=Raleway:200,400,800' rel='stylesheet' type='text/css'>
-    <!--[if IE]>
-		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
-</head>
+         // When the user clicks on the button, scroll to the top of the document
+         function topFunction() {
 
-<body>
+             window.scroll({
 
-<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+           top: 0,
+           left: 0,
+           behavior: 'smooth'
+         });
 
-<script>
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
 
-function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        document.getElementById("myBtn").style.display = "block";
-    } else {
-        document.getElementById("myBtn").style.display = "none";
-    }
-}
+         }
 
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-    window.scroll({
-  top: 800, 
-  left: 0, 
-  behavior: 'smooth' 
-});
-    
-  
-}
-    
-    function topFunction2() {
-    window.scroll({
-  top: 1600, 
-  left: 0, 
-  behavior: 'smooth' 
-});
-    }
-        function topFunction3() {
-    window.scroll({
-  top: 2000, 
-  left: 0, 
-  behavior: 'smooth' 
-});
-    
-  
-}
-</script>
-    <div class="container demo-1">
-        <div class="content">
-            <div id="large-header" class="large-header">
-                <canvas id="demo-canvas"></canvas>
-                <h1 class="main-title">Gerardo <span class="thin">De Leon</span></h1>
+      </script>
+      <script>
+         $(document).ready(function () {
+           $('div.codrops-header').click(function() {
+           $('html, body').animate({
+             scrollTop: $("div.secondColorDiv").offset().top
+           }, 1000)
+         }),
+           $('div.middle').click(function (){
+             $('html, body').animate({
+               scrollTop: $("div.bottom").offset().top
+             }, 1000)
+           }),
+           $('div.bottom').click(function (){
+             $('html, body').animate({
+               scrollTop: $("div.top").offset().top
+             }, 1000)
+           })
+         });
+
+      </script>
+      <!--  nav bar -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed-top">
+         <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#"></a>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+               <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                  <li class="nav-item active">
+                     <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="https://github.com/jerrydeleon">Github</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link disabled" href="https://www.linkedin.com/in/gerardodeleon1995">LinkedIn</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link disabled" href="https://www.linkedin.com/in/gerardodeleon1995">RÉSUMÉ</a>
+                  </li>
+               </ul>
+               <form class="form-inline my-2 my-lg-0">
+                  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+               </form>
             </div>
+         </div>
+      </nav>
 
-            <div class="codrops-header">
-                <h1>RÉSUMÉ</br>
-                    <h2> </h2>
-                
-
-                    <span><strong>Education</strong></span>
-                    <span>The University of Texas Rio Grande Valley Edinburg, TX
-                        </span>
-                    <p>B.S. in Computer Science and Engineering  Expected Graduation May 2018</p>
-
-                    <nav class="codrops-demos">
-                        <a class="current-demo" >Skills</a>
-                        <a id = "2" onclick="topFunction2()">Experience</a>
-                        <a onclick="topFunction3()">Relevant Coursework</a>
-                        <a href="https://github.com/jerrydeleon">Git Hub</a>
-                        <a href="https://www.linkedin.com/in/gerardodeleon1995">LinkedIn</a>
-                        <a href="https://drive.google.com/open?id=1PAd8f0YbNetPo2s_m5ajfEgv5euJpWh9">Resume.pdf</a>
-
-                    </nav>
+      <div id="large-header" class="large-header">
+        <canvas id="demo-canvas"></canvas>
+        <h1 class="main-title">Gerardo <span class="thin">De Leon</span></h1>
+      </div>
 
 
-                
 
-                    <h1>
-                        </br>
-                        <h1>SKILLS</br>
+      <h1>About Me</h1>
+      <div class="container marketing">
+         <!-- Three columns of text below the carousel -->
+         <div class="row">
+            <div class="col-lg-6">
+               <img class="image" src="Avi.png">
+               <h2>Gerardo De Leon</h2>
+               <p> Hello my name is Gerardo de Leon, I am a Web & Sofware Developer from South Texas with a Bachelors degree in Computer Science (BSCS) from The University of Texas Rio Grande Valley. Through out my undergrad, my course work as a B.S. candidate has prepared and exposed me to an extensive set of programming and academic experiences that have contributed to the person I am, a great team player that strongly believes in giving their all in something they are passionate about. </p>
+               <p><a class="btn btn-secondary" href="#" role="button">Résumé</a></p>
             </div>
-
-            <p9>
-                <center>Programming Experience</center>
-            </p9>
+            <!-- /.col-lg-4 -->
+            <div class="col-lg-6">
+               <h2>Education</h2>
+               <p><strong>The University of Texas Rio Grande Valley</br>B.S. in Computer Science May 2018</p>
+               </strong>
+               <p>
+               <h3>Relevant Coursework</h3>
+               <div class = "ul-text"
+               <div style="display: inline-block; text-align: left;">
+                  <ul style="list-style:circle;">
+                     <li>Fundamentals of Computer Programming</li>
+                     <li>Programming in C++ </li>
+                     <li>Object-Oriented Programming in C#</li>
+                     <li>Programming in Python</li>
+                     <li>Discrete Structures & Algorithms</li>
+                     <li>Design and Analysis of Algorithms</li>
+                     <li>Internet Programming</li>
+                     <li>Implementation and Management </br> of Database Systems</li>
+                     <li>Software Engineering I & II</li>
+                     <li>Organization of Computer Languages</li>
+                     <li>Systems Programming</li>
+                     <li>Computer Architecture</li>
+                     <li>Digital Image Processing</li>
+                     <li>Graphic Design Fundementals</li>
+                     <li>Graphic Design I & II</li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+      <!-- START THE FEATURETTES -->
+      <hr class="featurette-divider">
+      <div class="row featurette">
+         <div class="col-md-7">
+            <h2 class="featurette-heading">Programming <span class="text-muted">Skills</span></h2>
+            <pre>#include &lt;iostream&gt;<br>using namespace std; <br><br>int main() {<br>  cout<< "Hello there!"<< endl;<br>}</pre>
             <ul class="relevant" style="list-style:circle;">
-                <center>
-                    <span class="skill">C/C++</span>
-                    <span class="skill">C#</span>
-                    <span class="skill">Java</span>
-
-                    <span class="skill">Python</span>
-                </center>
-                <center>
-                    <span class="skill">HTML</span>
-                    <span class="skill">JS</span>
-                    <span class="skill">mySQL</span>
-                </center>
-
+               <center>
+                  <span class="skill">C/C++</span>
+                  <span class="skill">C#</span>
+                  <span class="skill">Java</span>
+                  <span class="skill">Python</span>
+               </center>
+               <center>
+                  <span class="skill">HTML</span>
+                  <span class="skill">JS</span>
+                  <span class="skill">mySQL</span>
+               </center>
             </ul>
-
-            <div>
-
-                <p9>
-                    <center>Writing Skills</center>
-                </p9>
-                <p8>
-                    <center>Ability to efficiently produce organized reports, labs and memos.</center>
-                </p8>
-                <h1> </h1>
-                <h1> </h1>
-
-                <p9>
-                    <center>Software Experience</center>
-                </p9>
-                <ul class="relevant3" style="list-style:circle;">
-                    <center>
-                        <span class="skill">XCODE</span>
-                        <span class="skill">PYCHARM</span>
-                        <span class="skill">NETBEANS</span>
-                        <span class="skill">VISUAL STUDIOS</span>
-                    </center>
-                </ul>
-                <ul class="relevant2" style="list-style:circle;">
-                    <center>
-                        <span class="skill">PHOTOSHOP</span>
-                        <span class="skill">ILLUSTRATOR</span>
-                        <span class="skill">INDESIGN</span>
-                        <span class="skill">MICROSOFT OFFICE</span>
-                    </center>
-                </ul>
-
-                <p9>
-                    <center>Bilingual in English and Spanish</center>
-                </p9>
-                <h1> </h1>
-                <h1> </h1>
-                <p9>
-                    <center>Self-motivated, creative thinker, excellent time management skills</center>
-                </p9>
-                <p9>
-                    <center>Adapt well and require little to no training in technical and web</center>
-                    </br>
-
-            </div>
-            <div class="secondColorDiv" id="second">
-                <div class="codrops-header">
-
-
-                    <h1>EXPERIENCE</br>
-                </div>
-
-                <p9>
-                    <center>Web Developer <strong>2015-Present</strong></center>
-                    </br>
-
-
-                    <p8>
-                        <center>Develop websites for local or self owned businesses.</center>
-                        </br>
-
-
-                        <center>
-                            <p8>Specialized in developing and maintaining the front end functionality of websites</p8>
-                        </center>
-                        <center>
-                            <p8>Prepared and presented technical proposals to clients.</p8>
-                        </center>
-                        <center>
-                            <p8>Focused on creation of personal websites with eCommerce integration</p8>
-                        </center>
-                        <center>
-                            <p8>Designing prototypes for apps and websites</br>
-                        </center>
-
-
-                        <center> <a href="http://2stoneindustries.com/">2StoneIndustries.com |</a>
-                            <div class="box"><iframe src="http://2stoneindustries.com/" width="500px" height="500px"></iframe></div>
-                            <a href="http://julianfiro.com/">JulianFiro.com |</a>
-                            <div class="box"><iframe src="http://julianfiro.com/" width="500px" height="500px"></iframe></div>
-                            <a href="http://fiestaflores.com/">FiestaFlores.com</a>
-                            <div class="box"><iframe src="http://fiestaflores.com/" width="500px" height="500px"></iframe></div>
-                            <p>
-                                </br>
-
-                                <p9>
-                                    <center>Medical Advisement System UI <strong>Spring 2016</strong></center>
-                                    </br>
-
-
-
-                                    <p8>Helped create online advising UI for The University of Texas Rio Grande Valley Medical School, where students enrolled in the medical school will have a one-to-one communication with advisors to guide them and help
-                                        them decide on their specialty that best suits them through a range of online surveys and confrences</br>
-                                        <p>
-                                            </br>
-
-
-                                            <p9>
-                                                <center>Computer Science I Lab Assistant <strong>2015-2016</strong></center>
-                                                </br>
-
-
-
-                                                <p8>Served as a communication liaison between the student and professor and set up personal study sessions for students, that needed extra help in the course</br>
-                                                    <p>
-                                                        </br>
-
-
-
-
-
-
-                                                        <p9>
-                                                            <center>iPhone Repair <strong>2014-2016</strong></center>
-                                                            </br>
-
-
-
-                                                            <p8>Repair iPhone Hardware on my spare time </p8>
-                                                            <p8>Repaired over 100+ cellphones in the last few years with approximately 95 percent customer satisfaction</p8>
-                                                            <p>
-                                                                </br>
-
-
-
-
-            </div>
-
-
-
-
-
-
-            <div class="thirdColorDiv" id="third">
-                <div class="codrops-header">
-
-
-                    <h1>RELEVANT COURSEWORK</br>
-
-                </div>
-
-                <div style="text-align: center;">
-                    <div style="display: inline-block; text-align: left;">
-                        <ul style="list-style:circle;">
-                            <li>Fundamentals of Computer Programming</li>
-                            <li>Programming in C++ </li>
-                            <li>Object-Oriented Programming in C#</li>
-                            <li>Programming in Python</li>
-                            <li>Discrete Structures & Algorithms</li>
-                            <li>Design and Analysis of Algorithms</li>
-                            <li>Internet Programming</li>
-                            <li>Implementation and Management of Database Systems</li>
-                            <li>Software Engineering I & II</li>
-                            <li>Organization of Computer Languages</li>
-                            <li>Systems Programming</li>
-                            <li>Computer Architecture</li>
-                            <li>Digital Image Processing</li>
-                            <li>Graphic Design Fundementals</li>
-			             <li>Graphic Design I & II</li>
-
-
-                        </ul>
-                    </div>
-                </div>
-
-
-
-
-
-                <header></br>
-                <header></br>
-                 <header></br>
-                <header></br>
-                
-                
-               <center><p>Gerardo de Leon | 2018</p></center> 
-            </div>
-
-        </div>
-
-
-
-
-
-
-        <!-- /container -->
-        <script src="js/TweenLite.min.js"></script>
-        <script src="js/EasePack.min.js"></script>
-        <script src="js/rAF.js"></script>
-        <script src="js/demo-1.js"></script>
-</body>
-
+            <h2 class="featurette-heading">Software <span class="text-muted">Experience</span></h2>
+            <ul class="relevant3" style="list-style:circle;">
+               <center>
+                  <span class="skill">XCODE</span>
+                  <span class="skill">PYCHARM</span>
+                  <span class="skill">NETBEANS</span>
+                  <span class="skill">VISUAL STUDIOS</span>
+                  <span class="skill">PHOTOSHOP</span></br>
+                  <span class="skill">ILLUSTRATOR</span>
+                  <span class="skill">INDESIGN</span>
+                  <span class="skill">MICROSOFT OFFICE</span>
+               </center>
+            </ul>
+            <hr class="featurette-divider">
+         </div>
+         <div class="col-md-5">
+            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" style="width: 550px; height: 400px;" src="codingpic.jpeg"
+         </div>
+      </div>
+      <!-- /END THE FEATURETTES -->
+      <footer class="container">
+         <p>Gerardo de Leon | 2018 </p>
+      </footer>
+      <!-- /container -->
+      <script src="js/TweenLite.min.js"></script>
+      <script src="js/EasePack.min.js"></script>
+      <script src="js/rAF.js"></script>
+      <script src="js/demo-1.js"></script>
+   </body>
 </html>
